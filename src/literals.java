@@ -1,3 +1,6 @@
+import java.sql.SQLOutput;
+import java.util.Scanner;
+
 public class literals{
     public static void main(String[] args) {
         byte age = 18;
@@ -9,5 +12,9 @@ public class literals{
         boolean a = true ; //or false;
         double d = 4.66;
         String str = "M17";
+
+        System.out.println("Enter your number ");
+        Scanner sc = new Scanner(System.in);
+        System.out.println(sc.hasNextInt());
     }
 }

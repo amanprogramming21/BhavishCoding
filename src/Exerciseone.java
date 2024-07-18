@@ -25,8 +25,6 @@ public class Exerciseone {
         System.out.println("Wanna calculate CGP ? [Y = yes / N = no ]");
         String ask1 = co_string.nextLine();
         if(ask1.equals("Y") || ask1.equals("y")) {
-            System.out.println("Enter you Totals in Se");
-//            float TCPGA = ;
             float CGP = percentage;
             System.out.println(name2 + " your CGP is " + CGP);
         }
@@ -35,3 +33,4 @@ public class Exerciseone {
         }
     }
 }
+
