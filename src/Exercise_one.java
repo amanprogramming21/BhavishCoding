@@ -1,7 +1,7 @@
 /*In this Exersice we will calc the percentage of 5 subjects */
 import java.util.Scanner;
 
-public class Exerciseone {
+public class Exercise_one {
     public static void main(String[] args) {
         Scanner co_string = new Scanner(System.in);
         System.out.println("Enter your full Name: ");
