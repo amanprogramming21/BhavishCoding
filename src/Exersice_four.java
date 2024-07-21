@@ -40,7 +40,7 @@ public class Exersice_four {
                 if (percentage > 40.0) {
                 System.out.println(Student_name + " you haved passed the exam");
                 } else {
-                    System.out.println(Student_name + " you are failed the exam");
+                    System.out.println(Student_name + " you have failed the exam");
                 }
                 break;
 
