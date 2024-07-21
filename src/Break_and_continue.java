@@ -8,7 +8,9 @@ public class Break_and_continue {
                 break;
             }
         }
+
         System.out.println("For loop ended do-while started");
+
         do{
             j--;
             if(j==2){
