@@ -7,7 +7,7 @@ public class Random_number_generator {
         Scanner UC = new Scanner(System.in);
         System.out.print("Enter how many number you want to generate: ");
         int UC1 = UC.nextInt();
-        while(UC1 >= 0) {
+        while(UC1 > 0) {
             Random random = new Random();
             int x = random.nextInt();
 
