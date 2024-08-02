@@ -14,44 +14,31 @@ public class Calculator {
             a[i] = scanner.nextFloat();
         }
 
+        System.out.println();
+
         for (int i = 0; i < num_time; i++) {
             System.out.print(a[i] + " ");
         }
 
-        float sum = 0;
-//        float product = 0;
-//        float difference = 0;
-//        float module = 0;
+//        float sum = 0;
+//
+//        Scanner operator = new Scanner(System.in);
+//        System.out.println("\nWhat would you like to do? [+ , - , * , / ]: ");
+//        String op = operator.next();
+//
+//        if(op.equals("+")){
+//            for (float v : a) {
+//                sum = v + sum;
+//            }
+//            System.out.println("Sum : "+sum);
+//        }
 
-        Scanner operator = new Scanner(System.in);
-        System.out.print("What would you like to do? [+ , - , * , / ]: ");
-        String op = operator.next();
+//        float product;
 
-        if(op.equals("+")){
-            for (float v : a) {
-                sum = v + sum;
-            }
-            System.out.println("Sum : "+sum);
+        for (float d : a) {
+            System.out.println("\n\nd = " + d);
+            float new_a = d * a[0];
+            System.out.println("\nNew-a: "+new_a);
         }
-
-   /*     if(op.equals("-")){
-            for (float v : a) {
-                difference = v - difference;
-            }
-            System.out.println("Difference : "+difference);
-        }
-        if(op.equals("*")){
-            for (float v : a) {
-                product = v * product;
-            }
-            System.out.println("Product: "+product);
-        }
-        if(op.equals("%")){
-            for (float v : a) {
-                module = v % module;
-            }
-            System.out.println("Module: "+module);
-        }
-*/
     }
 }
