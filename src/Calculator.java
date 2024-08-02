@@ -6,39 +6,71 @@ public class Calculator {
         System.out.print("How many number will you operate: ");
         int num_time = scanner.nextInt();
 
-        System.out.println("Enter " + num_time + " float digits: ");
+        System.out.println("Enter " + num_time + " digits: ");
 
-        float[] a= new float[num_time];
-
-        for (int i = 0; i < num_time; i++) {
-            a[i] = scanner.nextFloat();
-        }
-
-        System.out.println();
+        int[] uarray = new int[num_time];
 
         for (int i = 0; i < num_time; i++) {
-            System.out.print(a[i] + " ");
+            uarray[i] = scanner.nextInt();
         }
 
-//        float sum = 0;
-//
-//        Scanner operator = new Scanner(System.in);
-//        System.out.println("\nWhat would you like to do? [+ , - , * , / ]: ");
-//        String op = operator.next();
-//
-//        if(op.equals("+")){
-//            for (float v : a) {
-//                sum = v + sum;
-//            }
-//            System.out.println("Sum : "+sum);
-//        }
+        System.out.println("Values user entered");
 
-//        float product;
+        for (int i = 0; i < num_time; i++) {
+            System.out.print(uarray[i] + ", ");
+        }
 
-        for (float d : a) {
-            System.out.println("\n\nd = " + d);
-            float new_a = d * a[0];
-            System.out.println("\nNew-a: "+new_a);
+        int sum = 0;
+        int product = 0;
+        int difference;
+
+        Scanner operator = new Scanner(System.in);
+        System.out.println("\n\nWhat would you like to do? [+ , - , * , / ]: ");
+        String op = operator.next();
+
+        if (op.equals("+")) {
+            for (int v : uarray) {
+                sum = v + sum;
+            }
+            System.out.println("Sum : " + sum);
+        }
+
+        if (op.equals("-")) {
+            boolean sorted = true;
+            for (int lo = 0; lo < uarray.length - 1; lo++) {
+                if (uarray[lo] > uarray[lo + 1]) {
+                    sorted = false;
+                    break;
+                }
+            }
+            if (sorted) {
+                System.out.println("Array is sorted");
+                difference = uarray[1] - uarray[0];
+                for (int i = 2; i < uarray.length; i++) {
+                    difference = Math.min(difference, uarray[i] - uarray[i - 1]);
+                }
+                System.out.println("Difference between the values of array: " + difference);
+            } else {
+                System.out.println("Array is not sorted");
+                System.out.println("Apologies but the values of array cannot be cancelled with each other");
+            }
+        }
+
+        if (op.equals("*")) {
+            for (int j : uarray) {
+                product *= j;
+            }
+
+            System.out.println("\n\nProduct of all value stored in Array: " + product);
+        }
+
+        if (op.equals("/")) {
+            System.out.print("\n\nYou can't divide all the values of array with each other but can divide them other value you want: ");
+            int userinput = scanner.nextInt();
+            System.out.println("\n\nUpdated array: ");
+            for (int i = 0; i < num_time; i++) {
+                System.out.print(uarray[i]/userinput + ", ");
+            }
         }
     }
 }
