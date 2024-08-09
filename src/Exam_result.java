@@ -28,9 +28,15 @@ public class Exam_result {
             System.out.print("Computers: ");
             float sub5 = subM.nextFloat();
 
+            if(sub1 > 100 || sub2 > 100 || sub3 > 100 || sub4 > 100 || sub5 > 100){
+                System.out.println("\nYou have entered marks above 100 pls restart the program for correct response!");
+            }
+
             float total = sub1 + sub2 + sub3 + sub4 + sub5;
             float average = total / 5.0f;
             float percentage = (total / 500.0f) * 100.0f;
+
+            float cpga = average/10.0f;
 
 //========================Final Output==========================
 
@@ -49,10 +55,11 @@ public class Exam_result {
                 grade = 'E';
             }
 
-            System.out.println("\nThe Total marks   = " + total + "/500.0");
+            System.out.println("\nThe Total marks = " + total + "/500.0");
             System.out.println("The Average marks = " + average);
             System.out.println("The Percentage    = " + percentage + "%");
             System.out.println("The Grade         = '" + grade + "'");
+            System.out.println("CGPA              = " + cpga + " ");
         }
     }
 }
